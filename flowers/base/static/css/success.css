@@ -1,0 +1,58 @@
+/* Background */
+body {
+  background-color: #f8c8d4; /* Baby pink background */
+  
+}
+.success-section {
+    background: url(' images/rose3.jpg') no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+  }
+  
+  /* Container */
+  .success-container {
+    background-color: rgba(255, 240, 245, 0.9); /* soft pink overlay */
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+    font-style: italic;
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  /* Title */
+  .success-title {
+    font-size: 2.5rem;
+    color: #ff1493;
+    text-shadow: 0 0 8px #ffb6c1;
+    margin-bottom: 15px;
+  }
+  
+  /* Message */
+  .success-message {
+    font-size: 1.2rem;
+    color: #cc0066;
+    margin-bottom: 25px;
+  }
+  
+  /* Button */
+  .btn-back {
+    background-color: #ff69b4;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-back:hover {
+    background-color: #d60087;
+    box-shadow: 0 0 8px #ff69b4;
+  }

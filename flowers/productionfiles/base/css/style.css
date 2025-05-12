@@ -1,0 +1,86 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #ffc0cb !important; /* Baby pink */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 999;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  font-style: italic;
+}
+
+/* Navbar brand/title */
+.navbar-brand {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  color: white;
+  text-shadow: 0 0 10px magenta;
+}
+
+/* Navbar links */
+.navbar-links li a {
+  text-decoration: none;
+  color: white;
+  font-style: italic;
+  transition: text-shadow 0.3s ease;
+  margin-right: 30px;
+  text-shadow: 0 0 5px white;
+}
+.border{
+  border:2px solid transparent;
+}
+
+.navbar-links li a:hover {
+  text-shadow: 0 0 12px white;
+  border-bottom: 2px solid white;
+  border:2px solid #ffb6c1; 
+}
+
+/* Responsive navbar */
+@media (max-width: 768px) {
+  .navbar-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #ffb6c1; /* Slightly deeper baby pink for dropdown */
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-links li a {
+    margin: 10px 0;
+    text-shadow: 0 0 6px white;
+  }
+
+  .navbar-links li a:hover {
+    text-shadow: 0 0 15px white;
+    border-bottom: 2px solid white;
+  }
+}
+.footer{
+  height:40px;
+  margin-top:15px;
+  background-color: #ffb6c1;
+  text-decoration:none;
+  font-style: italic;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 62px;
+  width:100%;
+  font-style: italic;
+  justify-content: center;
+  
+  
+}

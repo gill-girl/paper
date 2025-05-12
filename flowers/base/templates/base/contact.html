@@ -1,0 +1,27 @@
+{% extends 'base/main.html' %}
+{% load static %}
+{% block body_class %} {% endblock %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+<title>Contact - Gill Shop</title>
+
+<section class="contact-section">
+  <div class="contact-container">
+    <h1 class="shop-title">GILL SHOP</h1>
+    <h2 class="form-heading">Contact Form</h2>
+
+    <form action="" method="POST">
+      {% csrf_token %}
+      {{ form.as_p }}
+      
+      <div class="form-buttons">
+        <button type="submit" class="btn-submit">Submit</button>
+        <a href="{% url 'order' %}" class="btn-next">Next Page</a>
+        <button type="button" onclick="window.history.back();" class="btn-back">Go Back</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+{% endblock %}

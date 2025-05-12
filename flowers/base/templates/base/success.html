@@ -1,0 +1,19 @@
+{% extends 'base/main.html' %}
+{% load static %}
+
+{% block body_class %} {% endblock %}
+{% block content %}
+
+
+<link rel="stylesheet" href="{% static 'css/success.css' %}">
+<title>Success -Gill Shop </title>
+
+<section class="success-section">
+  <div class="success-container">
+    <h2 class="success-title">Successfully Booked!</h2>
+    <p class="success-message">🎉 Congratulations, your booking has been confirmed! 🎉</p>
+    <button onclick="window.history.back();" class="btn-back">Go Back</button>
+  </div>
+</section>
+
+{% endblock %}

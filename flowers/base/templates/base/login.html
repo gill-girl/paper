@@ -1,0 +1,33 @@
+{% extends 'base/main.html' %}
+{% load static %}
+{% block content %}
+{% block body_class %} {% endblock %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+<title>Gill Flowershop</title>
+
+<div class="main-wrapper"> 
+    <div class="login-container">
+        <h1>Login Form</h1>
+        <form method="post" action="">
+            {% csrf_token %}
+            <div class="form-group">
+                {{ form.as_p }}
+            </div>
+
+            <div class="form-buttons">
+                <button type="submit" class="submit-btn">Submit</button>
+                <button type="button" onclick="window.history.back();" class="back-btn">Go Back</button>
+            </div>
+            
+            <a href="{% url 'home' %}" class="next-page-link">Next Page</a>
+        </form>
+
+        {% if user.is_authenticated %}
+        <div class="logout-section">
+            <a href="{% url 'logout' %}" class="logout-btn">Logout</a>
+        </div>
+        {% endif %}
+    </div>
+</div> 
+
+{% endblock %}

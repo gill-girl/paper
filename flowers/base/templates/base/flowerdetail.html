@@ -1,0 +1,18 @@
+{% extends 'base/main.html' %}
+{% load static %}
+{% block content %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/flowerdetail.css' %}">
+    <title>Flowers</title>
+</head>
+<body>
+    
+    <img src="{{ flower.image.url }}" alt="{{ flower.name }}" width="300">
+    <h1>{{ flower.name }}</h1>
+    <p>{{ flower.description }}</p>
+    <p>Price: RS.{{ flower.price }}</p>
+    <a href="{% url 'flowerlist' %}">Back to list</a>
+    
+</body>
+{% endblock %}
+

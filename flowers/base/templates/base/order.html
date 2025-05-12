@@ -1,0 +1,28 @@
+{% extends 'base/main.html' %}
+{% load static %}
+
+{% block body_class %} {% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/order.css' %}">
+
+<title>Order - Gill Shop</title>
+
+<section class="order-section">
+  <div class="order-container">
+    <h1 class="shop-title">GILL Shop</h1>
+    <h2 class="form-heading">Order Form</h2>
+
+    <form action="" method="POST">
+      {% csrf_token %}
+      {{ form.as_p }}
+
+      <div class="form-buttons">
+        <button type="submit" class="btn-submit">Submit</button>
+        <a href="{% url 'booking' %}" class="btn-next">Next Page</a>
+        <button type="button" onclick="window.history.back();" class="btn-back">Go Back</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'base/main.html' %}
+{% block body_class %} {% endblock %}
+{% load static %}
+{% block content %}
+
+<link rel=" stylesheet" href="{% static 'css/flowerlist.css}">
+
+<title>Flower List</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Flower List</h1>
+
+    <div id="flower-list">
+        {% for flower in flowers %}
+            <img 
+                src="{{ flower.image.url }}" 
+                alt="{{ flower.name }}" 
+                width="200"
+                class="flower-img"
+                data-id="{{ flower.id }}"
+                data-name="{{flower.name}}"
+                style="cursor: pointer; margin: 10px;"
+            >
+        {% endfor %}
+    </div>
+
+    <hr>
+
+    <div id="flower-detail">
+        <h2>Click a flower to see details here</h2>
+    </div>
+
+    <!-- Use Django to generate base URL safely -->
+    <script>
+        const flowerDetailBase = "{% url 'flowerdetail' 0 %}".replace("0/", "");
+
+        $(document).ready(function() {
+            $('.flower-img').click(function() {
+                var flowerId = $(this).data('id');
+                $.get(flowerDetailBase + flowerId + "/", function(data) {
+                    $('#flower-detail').html(data);
+                });
+            });
+        });
+    </script>
+<button type="button" onclick="window.history.back();">goback</button>
+<a href="{% url 'order' %}" class="btn-next">Next Page</a>
+{% endblock %}

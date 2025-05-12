@@ -1,0 +1,27 @@
+{% extends 'base/main.html' %}
+{% load static %}
+{% block body_class %} {% endblock %}
+{% block content %}
+<link rel ="stylesheet" href="{% static 'css/flower.css' %}">
+  <title>flowers</title>
+
+  <div id="flowers">
+    <div class="row"> 
+      {% for flower in myflowers %}
+      <div class="col">
+       <div class="card-body mx-auto 5">
+  <img src="{{ flower.image.url }}" alt="{{ flower.flowername }}"></a>
+    
+    
+    <h6 class="card-title">{{ flower.flowername }}</h6>
+    <h4 class="card-text">Rs.{{ flower.price }}</h4>
+    
+    <p style=color:blue padding-bottom-2px;>seemore</p>
+</div>
+</div>
+{% endfor %}
+</div>
+</div>
+<button type="button" onclick="window.history.back();" class="btn-back">Go Back</button>
+<a href="{% url 'flowerlist' %}" class="next-page-link">Next Page</a>
+{% endblock %}

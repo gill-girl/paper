@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #fff;
+  }
+  
+  /* Hero Section with Background Image + Overlay */
+  .hero-section {
+    background: url('css/images/rose2.jpg') no-repeat center center/cover;
+
+    
+    height: 150vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .hero-section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 182, 193, 0.35); /* soft pink overlay */
+    z-index: 1;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    font-style: italic;
+    max-width: 750px;
+    margin: auto;
+    padding: 20px;
+    color: #d60087; /* dark pink base */
+    text-shadow: 0 0 6px rgba(255, 105, 180, 0.7), 0 0 10px rgba(255, 20, 147, 0.4);
+  }
+  
+  /* Glowing Main Title */
+  .glow-title {
+    font-size: 3.2rem;
+    color: #d60087;
+    margin-bottom: 10px;
+    text-shadow: 0 0 6px rgba(255, 105, 180, 0.8), 0 0 12px rgba(255, 20, 147, 0.6);
+  }
+  
+  /* Subtitle */
+  .hero-subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+    color: #cc0077;
+    text-shadow: 0 0 5px rgba(255, 105, 180, 0.5);
+  }
+  
+  /* Button */
+  .hero-btn {
+    background-color: #ff69b4;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+    font-style: normal;
+    box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3);
+  }
+  
+  .hero-btn:hover {
+    background-color: #d60087;
+  }
+  
+  /* Combined Flower Description */
+  .section-title {
+    font-size: 2rem;
+    color: #d60087;
+    margin-top: 40px;
+    text-shadow: 0 0 6px rgba(255, 105, 180, 0.8);
+  }
+  
+  .section-desc {
+    font-size: 1.1rem;
+    color: #b8006e;
+    margin-top: 10px;
+    text-shadow: 0 0 4px rgba(255, 105, 180, 0.5);
+  }

@@ -1,0 +1,25 @@
+{% extends 'base/main.html' %}
+
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css'%}">
+{% block body_class %} {% endblock %}
+
+{% block title%}GILLFLOWER{% endblock title%}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+<link rel="stylesheet" href="{% static 'css/footer.css' %}">
+<title>Welcome</title>
+
+<!-- Combined Hero + Flower Info Section -->
+<section class="hero-section">
+  <div class="hero-content">
+    <h1 class="glow-title">Welcome to Our Flower Garden</h1>
+    <p class="hero-subtitle">Where every bloom whispers beauty</p>
+    <a href="/flowers" class="hero-btn"><p GO TO  <a href="/flowers">Flowers</a></p></a>
+    <h2 class="section-title">Our Beautiful Collection</h2>
+    <p class="section-desc">Scroll through to see our freshest flowers picked just for you.</p>
+  </div>
+</section>
+
+{% endblock %}
